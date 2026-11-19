@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scent Finder — leia oma nišilõhn</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">SCENT <span>FINDER</span></div>
+        <span>Sinu lõhn. Sinu lugu.</span>
+    </header>
+
+    <main>
+        <section class="hero" id="intro">
+
+            <div>
+                <div class="eyebrow">Nišilõhnad, sinu moodi</div>
+
+                <h1>
+                    Leia lõhn,<br>
+                    mis tundub <em>sinu oma.</em>
+                </h1>
+
+                <p>
+                    Vasta piltidega küsimustele ja avasta
+                    nišiparfüümid, mis sobivad sinu maitsega.
+                </p>
+
+                <button onclick="start()">
+                    Leia oma lõhn →
+                </button>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1000&q=85"
+                alt="Parfüüm ja lõhnamaailm"
+            >
+
+        </section>
+
+        <section class="panel" id="quiz" style="display:none">
+            <div id="step"></div>
+            <div class="progress">
+                <div id="bar"></div>
+            </div>
+
+            <div id="qs"></div>
+
+            <p class="error" id="err">
+                Vali enne jätkamist üks vastus.
+            </p>
+
+            <button onclick="move(-1)">← Tagasi</button>
+            <button onclick="reset()">Alusta uuesti</button>
+        
+        </section>
+
+        <section class="results" id="results">
+            <h2 id="title">Sinu nišilõhnad</h2>
+            <div class="grid" id="cards"></div>
+            <button onclick="reset()">Tee test uuesti</button>
+        </section>
+    </main>
+
+    <footer>
+        Scent Finder · Avasta midagi, mida kõik veel ei kanna.
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
